@@ -104,13 +104,13 @@ for (let indexY = 0; indexY < NUMBER_COLUMNS; indexY++) {
 const middleNumberColumns = Math.ceil(NUMBER_COLUMNS / 2);
 const middleNumberRows = Math.ceil(NUMBER_ROWS / 2);
 
-setTimeout(() => {
+// setTimeout(() => {
     cells[`${middleNumberColumns + 1}-${middleNumberRows - 1}`].draw(true);
     cells[`${middleNumberColumns}-${middleNumberRows - 1}`].draw(true);
     cells[`${middleNumberColumns}-${middleNumberRows}`].draw(true);
     cells[`${middleNumberColumns - 1}-${middleNumberRows}`].draw(true);
     cells[`${middleNumberColumns}-${middleNumberRows + 1}`].draw(true);
-}, 2000);
+// }, 2000);
 
 
 
@@ -136,4 +136,4 @@ function judgments() {
 
 setTimeout(() => {
     setInterval(judgments, 100);
-}, 3000);
+}, 1500);
