@@ -1,0 +1,16 @@
+{
+    "name": "Game of Life",
+    "short_name": "G.O.L",
+    "description": "Le Jeu de la vie est un automate cellulaire imaginé par John Horton Conway en 1970. C'est un jeu de simulation au sens mathématique.",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#ffffff",
+    "theme_color": "#000000",
+    "icons": [
+        {
+            "src": "/logo.png",
+            "sizes": "348x367",
+            "type": "image/png"
+        }
+    ]
+}
