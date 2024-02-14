@@ -1,6 +1,6 @@
-const CELL_SIZE = 5;
-const NUMBER_COLUMNS = Math.ceil(window.innerWidth / CELL_SIZE) + 10;
-const NUMBER_ROWS = Math.ceil(window.innerHeight / CELL_SIZE) + 10;
+const CELL_SIZE = 3;
+const NUMBER_COLUMNS = Math.ceil(window.innerWidth / CELL_SIZE) + 20;
+const NUMBER_ROWS = Math.ceil(window.innerHeight / CELL_SIZE) + 20;
 
 const canvas = document.getElementById('gridCanvas');
 const ctx = canvas.getContext('2d');
@@ -89,8 +89,8 @@ class Cell {
 
 
 //! ------< Create Cells >------
-for (let indexY = 0; indexY < NUMBER_COLUMNS; indexY++) {
-    for (let indexX = 0; indexX < NUMBER_ROWS; indexX++) {
+for (let indexY = 0; indexY < NUMBER_ROWS; indexY++) {
+    for (let indexX = 0; indexX < NUMBER_COLUMNS; indexX++) {
         const cell = new Cell((indexX), (indexY));
         cell.draw();
         cells[`${cell.x}-${cell.y}`] = cell;
@@ -104,13 +104,11 @@ for (let indexY = 0; indexY < NUMBER_COLUMNS; indexY++) {
 const middleNumberColumns = Math.ceil(NUMBER_COLUMNS / 2);
 const middleNumberRows = Math.ceil(NUMBER_ROWS / 2);
 
-// setTimeout(() => {
-    cells[`${middleNumberColumns + 1}-${middleNumberRows - 1}`].draw(true);
-    cells[`${middleNumberColumns}-${middleNumberRows - 1}`].draw(true);
-    cells[`${middleNumberColumns}-${middleNumberRows}`].draw(true);
-    cells[`${middleNumberColumns - 1}-${middleNumberRows}`].draw(true);
-    cells[`${middleNumberColumns}-${middleNumberRows + 1}`].draw(true);
-// }, 2000);
+cells[`${middleNumberColumns + 1}-${middleNumberRows - 1}`].draw(true);
+cells[`${middleNumberColumns}-${middleNumberRows - 1}`].draw(true);
+cells[`${middleNumberColumns}-${middleNumberRows}`].draw(true);
+cells[`${middleNumberColumns - 1}-${middleNumberRows}`].draw(true);
+cells[`${middleNumberColumns}-${middleNumberRows + 1}`].draw(true);
 
 
 
@@ -135,5 +133,5 @@ function judgments() {
 }
 
 setTimeout(() => {
-    setInterval(judgments, 100);
-}, 1500);
+    setInterval(judgments, 5);
+}, 1000);
